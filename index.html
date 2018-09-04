@@ -11,9 +11,9 @@
 </head>
 <body class="b-page">
 	<header class="b-header">
-		<div class="b-container">
-			<section class="b-top-header">
-				<div class="b-city">
+		<section class="b-top-header">
+			<div class="b-top-header__wrapper b-container">
+				<div class="b-city ">
 					<span class="b-city__name">Город:</span>
 					<select class="b-city__list">
 						<option value="1" selected>Набережные Челны</option>
@@ -31,8 +31,10 @@
 				<div class="b-phone">
 					<a class="b-phone__link b-link" href="callto:88007752100">8 800 775 21 00</a>
 				</div>
-			</section>
-			<section class="b-main-header">
+			</div>
+		</section>
+		<section class="b-main-header">
+			<div class="b-main-header__wrapper b-container">
 				<a href="javascript:void(0);" class="b-logo">
 					<img class="b-logo__img" src="img/logo.png" alt="logo">
 				</a>
@@ -50,25 +52,263 @@
 						</a>
 					</div>
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
 		<nav class="b-menu">
 			<div class="b-container">
 				<ul class="b-menu__items">
-					<li class="b-menu__item">Электроника</li>
-					<li class="b-menu__item">Бытовая техника</li>
-					<li class="b-menu__item">Ремонт и дача</li>
-					<li class="b-menu__item">Детские товары</li>
-					<li class="b-menu__item">Мебель</li>
-					<li class="b-menu__item">Спорт и туризм</li>
-					<li class="b-menu__item">Дом и дача</li>
-					<li class="b-menu__item">Авто</li>
+					<li class="b-menu__item"><a class="b-menu__item-link b-link" href="javascript:void(0);">Электроника</a></li>
+					<li class="b-menu__item"><a class="b-menu__item-link b-link" href="javascript:void(0);">Бытовая техника</a></li>
+					<li class="b-menu__item"><a class="b-menu__item-link b-link" href="javascript:void(0);">Ремонт и дача</a></li>
+					<li class="b-menu__item"><a class="b-menu__item-link b-link" href="javascript:void(0);">Детские товары</a></li>
+					<li class="b-menu__item"><a class="b-menu__item-link b-link" href="javascript:void(0);">Мебель</a></li>
+					<li class="b-menu__item"><a class="b-menu__item-link b-link" href="javascript:void(0);">Спорт и туризм</a></li>
+					<li class="b-menu__item"><a class="b-menu__item-link b-link" href="javascript:void(0);">Дом и дача</a></li>
+					<li class="b-menu__item"><a class="b-menu__item-link b-link" href="javascript:void(0);">Авто</a></li>
 				</ul>
 			</div>
 		</nav>
 	</header>
 	<div class="b-main">
-		<div class="b-container"></div>
+		<section class="b-slider">
+			<div class="b-slider__item">
+				<div class="b-slider__content-wrapper">
+					<div class="b-slider__content">
+						<img class="b-slider__img" src="img/slider/heart.png" alt="слайд">
+						<h2 class="b-slider__headline">Каждый день</h2>
+						<span class="b-slider__text">Товары со скидкой до 20%</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="b-best">
+			<div class="b-container">
+				<h2 class="b-headline">Лучшее и интересное</h2>
+				<div class="b-best__items">
+					<div class="b-best__item b-best__item-big b-best__item-bonus">
+						<div class="b-best__img-container">
+							<img class="b-best__img" src="img/best/credit-card.png" alt="">
+						</div>
+						<div class="b-best__desc">
+							<h3 class="b-best__head">Бонус</h3>
+							<span class="b-best__under-head">Скидка 5%</span>
+							<span class="b-best__text">Дополнительная скидка при онлайн-оплате</span>
+						</div>
+					</div>
+					<div class="b-best__item b-best__item-big">
+						<div class="b-best__img-container">
+							<img class="b-best__img" src="img/best/iphone-SE.png">
+						</div>
+						<div class="b-best__desc">
+							<h3 class="b-best__head">iPhone SE</h3>
+							<span class="b-best__text">iPhone SE Малая форма в своей лучшей форме.</span>
+						</div>
+					</div>
+					<div class="b-best__item b-best__item-mini">
+						<div class="b-best__img-container">
+							<img class="b-best__img" src="img/best/coffie.png">
+						</div>
+						<div class="b-best__desc">
+							<h3 class="b-best__head">Как угодить кофеману</h3>
+							<span class="b-best__text">Поможем выбрать подарок</span>
+						</div>
+					</div>
+					<div class="b-best__item b-best__item-mini">
+						<div class="b-best__img-container">
+							<img class="b-best__img" src="img/best/fan.png">
+						</div>
+						<div class="b-best__desc">
+							<h3 class="b-best__head">В игру вступают вентиляторы</h3>
+						</div>
+					</div>
+					<div class="b-best__item b-best__item-big">
+						<div class="b-best__img-container">
+							<img class="b-best__img" src="img/best/greel.png">
+						</div>
+						<div class="b-best__desc">
+							<h3 class="b-best__head">Идеальный стейк автоматически</h3>
+							<span class="b-best__text">Умный гриль от BORK подскажет нужную степень прожарки.</span>
+						</div>
+					</div>
+					<div class="b-best__item b-best__item-big">
+						<div class="b-best__img-container">
+							<img class="b-best__img" src="img/best/baby-chair.png">
+						</div>
+						<div class="b-best__desc">
+							<h3 class="b-best__head">Ищем идеальное детское автокресло</h3>
+						</div>
+					</div>
+					<div class="b-best__item b-best__item-mini">
+						<div class="b-best__img-container">
+							<img class="b-best__img" src="img/best/samsung-smart-watch-s2.png">
+						</div>
+						<div class="b-best__desc">
+							<h3 class="b-best__head">Samsung Gear S2</h3>
+							<span class="b-best__text">Набор важнейших функций всегда под рукой</span>
+						</div>
+					</div>
+					<div class="b-best__item b-best__item-mini b-best__item-sale">
+						<div class="b-best__img-container">
+							<img class="b-best__img" src="img/best/sale-50.png">
+						</div>
+						<div class="b-best__desc">
+							<h3 class="b-best__head">На радость малышам!</h3>
+							<span class="b-best__text">Скидки до 50% на игрушки 24-26 мая</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="b-advantage">
+			<div class="b-container">	
+				<div class="b-advantage__items">
+					<div class="b-advantage__item">
+						<div class="b-advantage__img-container">
+							<img class="b-advantage__img" src="img/advantage/delivery.png" alt="Доставка">
+						</div>
+						<div class="b-advantage__text-container">
+							<span class="b-advantage__text">Бесплатная доставка от 5 000 Р.</span>
+						</div>
+					</div>
+					<div class="b-advantage__item">
+						<div class="b-advantage__img-container">
+							<img class="b-advantage__img" src="img/advantage/warranty.png" alt="Гарантия">
+						</div>
+						<div class="b-advantage__text-container">
+							<span class="b-advantage__text">Гарантия честной цены</span>
+						</div>
+					</div>
+					<div class="b-advantage__item">
+						<div class="b-advantage__img-container">
+							<img class="b-advantage__img" src="img/advantage/return.png" alt="Возврат">
+						</div>
+						<div class="b-advantage__text-container">
+							<span class="b-advantage__text">Возврат в течении 60 дней</span>
+						</div>
+					</div>
+					<div class="b-advantage__item">
+						<div class="b-advantage__img-container">
+							<img class="b-advantage__img" src="img/advantage/credit.png" alt="Кредит">
+						</div>
+						<div class="b-advantage__text-container">
+							<span class="b-advantage__text">Покупайте сейчас, платите позже</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="b-inspire">
+			<div class="b-container">
+				<h2 class="b-headline">Вдохновляющий выбор</h2>
+				<div class="b-inspire__items">
+					<a class="b-inspire__item b-link" href="javascript:void(0);">
+						<div class="b-inspire__img-container b-inspire__img-container--blue">
+							<img class="b-inspire__img" src="img/inspire/electronics.png" alt="Электроника">
+						</div>
+						<h3 class="b-inspire__headline">Электроника</h3>
+					</a>
+					<a class="b-inspire__item b-link" href="javascript:void(0);">
+						<div class="b-inspire__img-container b-inspire__img-container--purple">
+							<img class="b-inspire__img" src="img/inspire/domestic.png" alt="Бытовая техника">
+						</div>
+						<h3 class="b-inspire__headline">Бытовая техника</h3>
+					</a>
+					<a class="b-inspire__item b-link" href="javascript:void(0);">
+						<div class="b-inspire__img-container b-inspire__img-container--green">
+							<img class="b-inspire__img" src="img/inspire/repair.png" alt="Ремонт и дача">
+						</div>
+						<h3 class="b-inspire__headline">Ремонт и дача</h3>
+					</a>
+					<a class="b-inspire__item b-link" href="javascript:void(0);">
+						<div class="b-inspire__img-container b-inspire__img-container--yellow">
+							<img class="b-inspire__img" src="img/inspire/kids-items.png" alt="Детские товары">
+						</div>
+						<h3 class="b-inspire__headline">Детские товары</h3>
+					</a>
+					<a class="b-inspire__item b-link" href="javascript:void(0);">
+						<div class="b-inspire__img-container b-inspire__img-container--yellow">
+							<img class="b-inspire__img" src="img/inspire/furniture.png" alt="Мебель">
+						</div>
+						<h3 class="b-inspire__headline">Мебель</h3>
+					</a>
+					<a class="b-inspire__item b-link" href="javascript:void(0);">
+						<div class="b-inspire__img-container b-inspire__img-container--green">
+							<img class="b-inspire__img" src="img/inspire/sport.png" alt="Спорт и туризм">
+						</div>
+						<h3 class="b-inspire__headline">Спорт и туризм</h3>
+					</a>
+					<a class="b-inspire__item b-link" href="javascript:void(0);">
+						<div class="b-inspire__img-container b-inspire__img-container--purple">
+							<img class="b-inspire__img" src="img/inspire/house.png" alt="Дом и дача">
+						</div>
+						<h3 class="b-inspire__headline">Дом и дача</h3>
+					</a>
+					<a class="b-inspire__item b-link" href="javascript:void(0);">
+						<div class="b-inspire__img-container b-inspire__img-container--blue">
+							<img class="b-inspire__img" src="img/inspire/auto.png" alt="Авто">
+						</div>
+						<h3 class="b-inspire__headline">Авто</h3>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="b-brand">
+			<div class="b-container">
+				<h2 class="b-headline">Бренды</h2>
+				<div class="b-brand__items">
+					<a class="b-brand__item b-link" href="javascript:void(0);" title="">
+						<div class="b-brand__img-container">
+							<img class="b-brand__img" src="img/brand/lg.png" alt="LG">
+						</div>
+						<h4 class="b-brand__item-head">LG</h4>
+					</a>
+					<a class="b-brand__item b-link" href="javascript:void(0);" title="">
+						<div class="b-brand__img-container">
+							<img class="b-brand__img" src="img/brand/samsung.png" alt="Samsung">
+						</div>
+						<h4 class="b-brand__item-head">Samsung</h4>
+					</a>
+					<a class="b-brand__item b-link" href="javascript:void(0);" title="">
+						<div class="b-brand__img-container">
+							<img class="b-brand__img" src="img/brand/apple.png" alt="Apple">
+						</div>
+						<h4 class="b-brand__item-head">Apple</h4>
+					</a>
+					<a class="b-brand__item b-link" href="javascript:void(0);" title="">
+						<div class="b-brand__img-container">
+							<img class="b-brand__img" src="img/brand/canon.png" alt="Canon">
+						</div>
+						<h4 class="b-brand__item-head">Canon</h4>
+					</a>
+					<a class="b-brand__item b-link" href="javascript:void(0);" title="">
+						<div class="b-brand__img-container">
+							<img class="b-brand__img" src="img/brand/hp.png" alt="HP">
+						</div>
+						<h4 class="b-brand__item-head">HP</h4>
+					</a>
+					<a class="b-brand__item b-link" href="javascript:void(0);" title="">
+						<div class="b-brand__img-container">
+							<img class="b-brand__img" src="img/brand/dyson.png" alt="Dyson">
+						</div>
+						<h4 class="b-brand__item-head">Dyson</h4>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="b-banner">
+			<div class="b-container">
+				<div class="b-banner__sale">
+					<div class="b-banner__info">
+						<h5 class="b-banner__head">Получите скидку 20%</h5>
+						<span class="b-banner__text">на кофемашины и кофеварки Delonghi</span>
+						<img class="b-banner__info-img" src="img/Delonghi.png" alt="Delonghi">
+					</div>
+					<div class="b-banner__img-container">
+						<img class="b-banner__img" src="img/coffie-delonghi.png" alt="Coffie">
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 	<footer class="b-footer">
 		<div class="b-container"></div>
