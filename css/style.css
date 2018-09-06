@@ -62,17 +62,14 @@ input, button, a, select {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	align-items: center;
 }
+.b-top-header__wrapper { align-items: baseline; }
+.b-main-header__wrapper { align-items: center; }
 .b-top-header {
 	color:  #666;
 	font-size: 13px;
 	font-weight: 500;
 	line-height: 15px;
-}
-.b-city,
-.b-phone {
-	margin: 0 39px 16px 0;
 }
 .b-city__list {
 	font-family: inherit;
@@ -96,8 +93,8 @@ input, button, a, select {
 .b-nav-list__item:not(:last-child) {
 	margin: 0 39px 16px 0;
 }
-.b-nav-list__item-mark {
-	color: rgb(235, 46, 44);
+.b-mark-promo {
+	color: #eb2e2c;;
 }
 .b-phone__link {
 	font-size: 15px;
@@ -107,10 +104,12 @@ input, button, a, select {
 .b-main-header {
 	padding: 18px 0 0 0;
 }
-.b-logo,
-.b-search__input,
+..b-search__input,
 .b-user {
 	margin: 0 0 16px 0;
+}
+.b-logo {
+	margin: 0 24px 16px 0;
 }
 .b-search__input {
 	width: 688px;
@@ -371,7 +370,6 @@ input, button, a, select {
 .b-banner__img-container {
 	width: 489px;
 }
-
 .b-interesting {
 	padding: 56px 0 0 0;
 	border-bottom: 1px solid #f4f4f4;
@@ -388,12 +386,17 @@ input, button, a, select {
 }
 .b-product {
 	width: 289px;
-	padding: 20px 0 0 20px;
+	padding: 0 0 0 20px;
 }
 .b-product__img-container {
+	width: 249px;
 	height: 250px;
-	width: 100%;
 	margin: 0 0 16px 0;
+	line-height: 250px;
+	text-align: center;
+}
+.b-product__img {
+	vertical-align: middle;
 	text-align: center;
 }
 .b-product__info-container {
@@ -416,17 +419,51 @@ input, button, a, select {
 	-ms-word-break: break-all;
 	overflow: hidden;
 }
-.b-product__price {
+.b-price {
+	margin: 0 0 5px 0;
 	color: #161616;
 	font-weight: 900;
 }
-.b-product__price-value {
+.b-price-container {
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+.b-price-container:last-child {
+	margin: 0;
+}
+.b-price__value {
 	font-size: 24px;
 	line-height: 31px;
 }
-.b-product__price-currency {
+.b-price__currency {
 	font-size: 11px;
 	line-height: 31px;
+}
+.b-price__old {
+	display: block;
+	font-size: 11px;
+	font-weight: 900;
+	line-height: 11px;
+}
+.b-product__delivery { margin: 0 0 10px 0; }
+.b-product__delivery-link {
+	display: block;
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 17px;
+}
+.b-product__rate { margin: 0 0 10px 0; }
+.b-rate__star-container,
+.b-rate__star-count {
+	vertical-align: middle;
+}
+.b-rate__star-container {
+	margin: 0 3px 0 0;
+}
+.b-rate__star-count {
+	font-size: 13px;
+	line-height: 15px;
+	color:  #999;
 }
 
 .b-advice {
@@ -457,34 +494,52 @@ input, button, a, select {
 	width: 950px;
 	align-items: center;
 }
+.b-advice__nav-icon,
+.b-advice__nav-text,
+.b-advice__info-link__icon,
+.b-advice__info-link__title {
+	vertical-align: middle;
+}
+.b-advice__nav-icon {
+	margin: 0 2px 0 0;
+}
 .b-advice__nav-link {
-	max-width: 187px;
-	padding: 0 0 28px 0;
+	padding: 0 17px 28px 0;
 	font-size: 15px;
 	font-weight: 500;
 	line-height: 21px;
 	text-transform: uppercase;
 	color:  #151515;
+	border-bottom: 5px solid transparent;
+	transition: text-shadow .3s;
 }
 .b-advice__nav-link:hover {
 	border-bottom: 5px solid #ffdc00;
-	font-weight: 700;
+	/* font-weight: 700; */
 	color:  #161616;
-}
-.b-advice__nav-icon,
-.b-advice__nav-text {
-	vertical-align: middle;
+	text-shadow: 0 1px 0.1px #161616, 0 1px 0.1px #161616;
+	/*
+	 * с f-w не получается, т.к. ширина элементов изменяется и двигает другие.
+	 * А фиксированную ширину каждому элементу задавать не есть хорошо. 
+	 */
 }
 .b-btn {
 	height: 40px;
 	padding: 0 19px;
-	border: 1px solid #dddddd;
-	background-color: #fff;
+	border: 0;
 	font-size: 15px;
 	font-weight: 700;
 	color: #161616;
 	text-transform: uppercase;
 }
+.b-btn-white {
+	border: 1px solid #dddddd;
+	background-color: #fff;
+}
+.b-btn-yellow {
+	background-color:  #ffdc00;
+}
+
 .b-advice__slide,
 .b-advice__products {
 	display: flex;
@@ -495,26 +550,118 @@ input, button, a, select {
 .b-advice__slide-container {
 	width: 100%;
 	padding: 40px 0 0 0;
-	background: url("../img/banner-braslet.png") no-repeat center left;
 }
-.b-advice__slide {
-	
+.b-advice__slide-container--black {
+	background: #000 url("../img/banner-braslet2.png") no-repeat center left;
+}
+.b-advice__slide-container--white {
+	background-color:  #fafafa;
+	border-bottom: 1px solid #f4f4f4;
 }
 .b-advice__info {
-
+	display: flex;
+	flex-flow: column nowrap;
+}
+.b-advice__info--white-text {
 	color: #fff;
 }
+.b-advice__info--black-text {
+	color: #161616;
+}
 .b-advice__info-head {
+	width: 350px;
+	margin: 0 0 23px 0;
 	font-size: 35px;
 	font-weight: 700;
 	line-height: 45px;
 }
 .b-advice__info-text {
+	width: 450px;
+	margin: 0 0 11px 0;
 	font-size: 15px;
 	font-weight: 500;
 	line-height: 21px;
+	white-space: pre-wrap;
+}
+.b-advice__info-link {
+	margin: 0 0 17px 0;
+}
+.b-advice__info-link__icon {
+	margin: 0 5px 0 0;
+}
+.b-advice__info-link__title {
+	font-size: 13px;
+	font-weight: 500;
+}
+.b-advice__info-link__title--black {
+	color: #fff;
+	opacity: .5;
+}
+.b-advice__info-link__title--white {
+	color: #666;
+}
+.b-advice__info-btn {
+	width: 165px;
+	padding: 0 10px;
+	margin: 0 5px 5px 0;
 }
 .b-advice__product {
 	height: 465px;
+	margin: 0 11px 40px 0;
+	border: 1px solid #f4f4f4;
 	background-color: #fff;
+}
+.b-advice__product:last-child {
+	margin: 0;
+}
+
+.b-viewed {
+	padding: 45px 0 0 0;
+}
+.b-viewed__items {
+	display: flex;
+	flex-flow: row nowrap;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.b-viewed__item {
+	width: 290px;
+	height: 120px;
+	padding: 10px 0 0 20px;
+	border: 1px solid #f0f0f0;
+	background-color: #fff;
+	display: flex;
+	flex-flow: row nowrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	align-items: center;
+}
+.b-viewed__img-container {
+	width: 100px;
+	height: 100px;
+	margin: 0 8px 0 0;
+	line-height: 100px;
+	text-align: center;
+}
+.b-viewed__img {
+	text-align: center;
+	vertical-align: middle;
+}
+.b-viewed__info-container {
+	vertical-align: middle;
+}
+.b-viewed__item-name {
+	width: 132px;
+	height: 50px;
+	font-size: 13px;
+	line-height: 16px;
+	color: #666;
+	vertical-align: middle;
+}
+.b-viewed__price-value {
+	font-size: 18px;
+}
+
+.b-form__input-btn {
+	width: 190px;
 }
