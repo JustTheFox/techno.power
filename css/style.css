@@ -72,17 +72,8 @@ input, button, a, select {
 	line-height: 15px;
 }
 .b-city__list {
-	font-family: inherit;
-	font-size: inherit;
-	text-transform: inherit;
-	color: inherit;
 	text-decoration: underline;
 	text-decoration-style: dashed;
-	border: 0;
-	background: transparent;
-	-webkit-appearance: none;
-    -moz-appearance: none;
-    -webkit-tap-highlight-color: transparent;
 }
 .b-list {
 	list-style: none;
@@ -145,6 +136,24 @@ input, button, a, select {
 .b-login__in {
 	text-transform: lowercase;
 	color: #666;
+}
+.b-basket__link {
+	position: relative;
+}
+.b-basket__count {
+	display: block;
+	width: 21px;
+	height: 21px;
+	border-radius: 50%;
+	background-color:  #ffdc00;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 21px;
+	color:  #333;
+	text-align: center;
+	position: absolute;
+	top: -45px;
+    right: -35px;
 }
 .b-menu {
 	width: 100%;
