@@ -207,11 +207,14 @@ input, button, a, select {
 	width: 850px;
     height: 125%;
     border-radius: 32% 0% 0% 32% / 115% 0% 0% 115%;
-	/* border-radius: 200px 0 0 200px; */
 	margin: -4% 0 0 0;
 	background:  #ffdc00;
 	background-repeat: no-repeat;
 	background-position: right center;
+	/*
+	 * Не знаю костыль это или нет
+	 * Но никак иначе сделать не удалось
+	 */
 }
 .b-slider__content {
 	width: 535px;
