@@ -47,6 +47,24 @@ input, button, a, select {
 	max-width: 1190px;
 	margin: 0 auto;
 }
+.b-btn {
+	height: 40px;
+	padding: 0 19px;
+	border: 0;
+	font-family: Museo Sans, sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	color: #161616;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.b-btn-white {
+	border: 1px solid #dddddd;
+	background-color: #fff;
+}
+.b-btn-yellow {
+	background-color:  #ffdc00;
+}
 .b-page {
 	font-family: Museo Sans, sans-serif;
 }
@@ -172,6 +190,7 @@ input, button, a, select {
 }
 .b-slider {
 	height: 428px;
+	position: relative;
 }
 .b-slider__item {
 	display: flex;
@@ -182,18 +201,21 @@ input, button, a, select {
 	text-transform: uppercase;
 	color: #161616;
 	background: url("../img/slider/slider-bg.png") no-repeat left center;
+	overflow: hidden;
 }
 .b-slider__content-wrapper {
 	width: 850px;
-	height: 100%;
-	border-radius: 200px 0 0 200px;
+    height: 125%;
+    border-radius: 32% 0% 0% 32% / 115% 0% 0% 115%;
+	/* border-radius: 200px 0 0 200px; */
+	margin: -4% 0 0 0;
 	background:  #ffdc00;
 	background-repeat: no-repeat;
 	background-position: right center;
 }
 .b-slider__content {
 	width: 535px;
-	padding: 54px 0 0 0;
+	padding: 104px 0 0 0;
     margin: 0 auto;
 	font-size: 48px;
 	text-align: center;
@@ -205,6 +227,45 @@ input, button, a, select {
 .b-slider__text {
 	font-weight: 300;
 }
+.b-slider__arrow {
+	height: 35px;
+	padding: 5px 10px;
+	border: none;
+	background-color:  rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	position: absolute;
+	top: 45%;
+	z-index: 10;
+}
+.b-slider__arrow:hover { background-color:  rgba(0, 0, 0, 0.5) }
+.b-slider__arrow-left {
+	left: 4%;
+}
+.b-slider__arrow-right {
+	right: 4%;
+}
+.b-slider__paging {
+	position: absolute;
+	bottom: 5%;
+	right: 3%;
+}
+.b-paging__items {
+	font-size: 0;	
+	z-index: 10;
+}
+.b-paging__item {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 10px 0 0;
+	border-radius: 50%;
+	background-color:  rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+.b-paging__item-active {
+	background-color:  rgba(0, 0, 0, 0.6);
+}
+
 .b-best {
 	padding: 53px 0 0 0;
 	margin: 0 0 50px 0;
@@ -289,6 +350,7 @@ input, button, a, select {
 	color: #fff;
 }
 .b-best__item-mini .b-best__desc {
+	padding: 0 35px;
 	text-align: center;
 }
 
@@ -305,7 +367,7 @@ input, button, a, select {
 	align-items: center;
 }
 .b-advantage__item {
-	width: 250px;
+	width: 285px;
 	height: 76px;
 	margin: 0 0 37px 0;
 }
@@ -364,12 +426,37 @@ input, button, a, select {
 	margin: 0 0 41px 0;
 }
 .b-brand__head { margin: 0 0 43px 0; }
-.b-brand__items {
+.b-brand__btn { 
+	height: 35px;
+	font-size: 13px;
+	margin: 0 10px 0 0;
+}
+.b-brand__head-container,
+.b-brand__items,
+.b-interesting__head-container,
+.b-viewed__head-container {
 	display: flex;
 	flex-flow: row nowrap;
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
 }
+.b-brand__head-container {
+	align-items: baseline;
+}
+.b-brand__btn,
+.b-arrows {
+	display: inline-block;
+	vertical-align: middle;
+}
+.b-arrow-left,
+.b-arrow-right {
+	height: 35px;
+	padding: 4px 10px;
+}
+.b-arrow-left {
+	margin: 0 6px 0 0;
+}
+.b-arrow__img { text-align: center; }
 .b-brand__item {
 	width: 190px;
 	height: 130px;
@@ -591,23 +678,6 @@ input, button, a, select {
 	 * с f-w не получается, т.к. ширина элементов изменяется и двигает другие.
 	 * А фиксированную ширину каждому элементу задавать не есть хорошо. 
 	 */
-}
-.b-btn {
-	height: 40px;
-	padding: 0 19px;
-	border: 0;
-	font-family: Museo Sans, sans-serif;
-	font-size: 15px;
-	font-weight: 700;
-	color: #161616;
-	text-transform: uppercase;
-}
-.b-btn-white {
-	border: 1px solid #dddddd;
-	background-color: #fff;
-}
-.b-btn-yellow {
-	background-color:  #ffdc00;
 }
 
 .b-advice__slide,
@@ -882,7 +952,7 @@ input, button, a, select {
 	margin: 0 8px 0 0;
 }
 .b-designer__name {
-	margin: 0 20px 0 0;
+	margin: 0 85px 0 0;
 	font-size: 13px;
 }
 .b-designer__link {
