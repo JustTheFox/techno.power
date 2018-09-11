@@ -800,9 +800,33 @@ input, button, a, select {
 	margin: 0 11px 39px 0;
 	border: 1px solid #f4f4f4;
 	background-color: #fff;
+	position: relative;
 }
 .b-advice__product:last-child {
 	margin: 0;
+}
+.b-product__label {
+	height: 18px;
+	padding: 3px 6px;
+	font-size: 11px;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #fff;
+	position: absolute;
+}
+.b-product__label-hit {
+    top: 18px;
+	background-color: #309ace;
+}
+.b-product__label-promo {
+	top: 38px;
+	background-color: #eb2e2c;	
+}
+.fa-angle-right::before {
+	content: "\203A";
+	font-size: 16px;
+	line-height: 10px;
+	font-style:  normal;
 }
 
 .b-viewed {
