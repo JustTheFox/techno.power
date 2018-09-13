@@ -34,6 +34,10 @@ input, button, a, select {
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+.b-container {
+	max-width: 1190px;
+	margin: 0 auto;
+}
 .b-mark {
 	background: transparent;
 	color: inherit;
@@ -43,9 +47,8 @@ input, button, a, select {
 	color: inherit;
 	cursor: pointer;
 }
-.b-container {
-	max-width: 1190px;
-	margin: 0 auto;
+.b-list {
+	list-style: none;
 }
 .b-btn {
 	height: 40px;
@@ -98,12 +101,12 @@ input, button, a, select {
 	font-weight: 500;
 	line-height: 15px;
 }
+.b-city {
+	margin: 0 36px 0 0;
+}
 .b-city__list {
 	text-decoration: underline;
 	text-decoration-style: dashed;
-}
-.b-list {
-	list-style: none;
 }
 .b-nav-list__items {
 	display: flex;
@@ -116,7 +119,9 @@ input, button, a, select {
 .b-mark-promo {
 	color: #eb2e2c;;
 }
+
 .b-phone__link {
+	letter-spacing: .4px;
 	font-size: 15px;
 	font-weight: 700;
 	color: inherit;
@@ -218,6 +223,7 @@ input, button, a, select {
 .b-slider {
 	height: 428px;
 	position: relative;
+	background-color: #ffdc00;
 }
 .b-slider__item {
 	display: flex;
@@ -227,7 +233,7 @@ input, button, a, select {
 	font-size: 48px;
 	text-transform: uppercase;
 	color: #161616;
-	background: url("../img/slider/slider-bg.png") no-repeat left center;
+	background: #ffdc00 url("../img/slider/slider-bg.png") no-repeat left center;
 	overflow: hidden;
 }
 .b-slider__content-wrapper {
@@ -235,7 +241,7 @@ input, button, a, select {
 	height: 142%;
 	border-radius: 48% 0% 0% 48% / 109% 0% 0% 109%;
 	margin: -7% 0 0 0;
-	background:  #ffdc00;
+	background-color:  #ffdc00;
 	background-repeat: no-repeat;
 	background-position: right center;
 	/*
@@ -415,9 +421,6 @@ input, button, a, select {
 	width: 285px;
 	height: 76px;
 	margin: 0 0 37px 0;
-}
-.b-advantage__item:hover .b-advantage__text {
-	color: #666;
 }
 .b-advantage__img-container,
 .b-advantage__text-container {
@@ -709,6 +712,18 @@ input, button, a, select {
 .b-rate__star-container {
 	margin: 0 3px 0 0;
 }
+.b-rate__star::before {
+	content: "";
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+}
+.b-rate__full-star::before {
+	background: url("../img/icon/full-star.png") no-repeat;
+}
+.b-rate__empty-star::before {
+	background: url("../img/icon/empty-star.png") no-repeat;
+}
 .b-rate__star-count {
 	font-size: 13px;
 	line-height: 15px;
@@ -754,27 +769,23 @@ input, button, a, select {
 }
 .b-advice__nav-link {
 	padding: 0 17px 25px 0;
+	border-bottom: 5px solid transparent;
 	font-size: 15px;
 	font-weight: 500;
 	line-height: 21px;
 	text-transform: uppercase;
 	color:  #151515;
-	border-bottom: 5px solid transparent;
-	transition: all .3s easy-out;
 }
-.b-advice__nav-link:hover {
+.b-advice__active-link {
+	padding: 0 15.5px 25px 0;
 	border-bottom: 5px solid #ffdc00;
 	font-weight: 700;
 	color:  #161616;
-	padding: 0 15.5px 25px 0;
-	/* text-shadow: 0 1px 0.1px #161616, 0 1px 0.1px #161616; */
-	/*
-	 * с f-w не получается, т.к. ширина элементов изменяется и двигает другие.
-	 * А фиксированную ширину каждому элементу задавать не есть хорошо. 
-	 */
 }
-.b-advice__nav-link:hover .b-advice__nav-icon {
-
+.b-advice__active-link .b-advice__nav-icon {
+	-webkit-filter: brightness(5%) blur(0px);
+	-moz-filter: brightness(5%) blur(0px);
+	filter: brightness(5%) blur(0px);
 }
 
 .b-advice__slide,
@@ -925,15 +936,19 @@ input, button, a, select {
 	vertical-align: middle;
 }
 .b-viewed__info-container {
-	vertical-align: middle;
+	height: 100%;
 }
 .b-viewed__item-name {
+	display: table-cell;
 	width: 132px;
 	height: 50px;
+	padding: 5px 0 0 0;
 	font-size: 13px;
+	font-weight: 700;
 	line-height: 16px;
 	color: #666;
 	vertical-align: middle;
+	overflow: hidden;
 }
 .b-viewed__price {}
 .b-viewed__price-value {
@@ -1001,6 +1016,7 @@ input, button, a, select {
 	margin: 0 0 34px 0;
 }
 .b-footer__title {
+	display: block;
 	margin: 0 0 8px 0;
 	font-size: 18px;
 	font-weight: 700;
