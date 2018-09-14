@@ -534,7 +534,7 @@ input, button, a, select {
 .b-brand {
 	padding: 60px 0 41px 0;
 }
-.b-brand__title { margin: 0 0 43px 0; }
+.b-title--brand { margin: 0; }
 .b-brand__btn { 
 	height: 35px;
 	font-size: 13px;
@@ -550,6 +550,7 @@ input, button, a, select {
 	justify-content: space-between;
 }
 .b-brand__title-container {
+	margin: 0 0 37px 0;
 	align-items: baseline;
 }
 .b-brand__btn,
@@ -573,16 +574,21 @@ input, button, a, select {
 	padding: 20px 0 0 0;
 	border: 1px solid #f4f4f4;
 	text-align: center;
-	transition: all 0.2s linear;
 }
-.b-brand__item-head {
-	display: none;
+.b-brand__item-title {
+	display: block;
+	visibility: hidden;
+	opacity: 0;
 	font-size: 15px;
 	font-weight: 500;
 	color: #161616;
+	transition: visibility 0s, opacity 0.5s linear;
 }
 .b-brand__item:hover  { border-color: #ddd;	}
-.b-brand__item:hover .b-brand__item-head { display: block; }
+.b-brand__item:hover .b-brand__item-title { 
+	visibility: visible;
+	opacity: 1;
+}
 
 .b-banner {
 	padding: 0 0 60px 0;
@@ -638,7 +644,7 @@ input, button, a, select {
 	border-bottom: 1px solid #f4f4f4;
 }
 .b-interesting__title-container {
-	margin: 0 0 23px 0;
+	margin: 0 0 19px 0;
 }
 .b-title--interesting {
 	margin: 0;
@@ -1118,7 +1124,7 @@ input, button, a, select {
 .b-designer__name { vertical-align: middle; }
 .b-designer__img { margin: 0 8px 0 0; }
 .b-designer__name {
-	margin: 0 88px 0 0;
+	margin: 0 89px 0 0;
 	font-size: 13px;
 }
 .b-designer__link {	text-decoration: underline; }
