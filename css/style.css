@@ -248,21 +248,45 @@ input, button, a, select {
 .b-slider {
 	height: 428px;
 	position: relative;
-	background-color: #ffdc00;
+	background-color: #ffde00;
 }
 .b-slider__item {
+	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-flow: row nowrap;
-	height: 100%;
-	padding: 0 0 0 460px;
+	justify-content: flex-start;
 	font-size: 48px;
 	text-transform: uppercase;
 	color: #161616;
-	background: #ffdc00 url("../img/slider/slider-bg.png") no-repeat left center;
 	overflow: hidden;
+}
+	/* width: 666px;
+	height: 129%;
+	border-radius: 48% 0% 0% 48% / 109% 0% 0% 109%;
+	margin: -7.2% 0 0 0;
+	background-color:  #ffde00; */
+	/*
+	 * Не знаю костыль это или нет
+	 * Но никак иначе сделать не удалось
+	 */
+
+.b-slider__img {
+	width: 493px;
+	height: 100%;
+	background: url("../img/slider/slider-bg.png") no-repeat 0% 49%;
+	background-size: cover;
+}
+.b-slider__content {
+	width: 790px;
+	height: 100%;
+	padding: 55px 160px 0 60px;
+	font-size: 48px;
+	text-align: center;
+	background-color: #ffde00;
 	position: relative;
 }
-.b-slider__item::before {
+.b-slider__content::before {
 	content: "";
 	display: block;
 	width: 80px;
@@ -270,27 +294,17 @@ input, button, a, select {
 	background: url("../img/slider/circle.png") no-repeat;
 	position: absolute;
 	top: -48px;
-	left: 431px;
+    left: -62px;
 }
-
-	/* width: 666px;
-	height: 129%;
-	border-radius: 48% 0% 0% 48% / 109% 0% 0% 109%;
-	margin: -7.2% 0 0 0;
-	background-color:  #ffdc00; */
-	/*
-	 * Не знаю костыль это или нет
-	 * Но никак иначе сделать не удалось
-	 */
-
-.b-slider__content {
-	width: 670px;
-	padding: 55px 0 0 86px;
-	font-size: 48px;
-	text-align: center;
-}
-.b-slider__img {
-	margin: 0 0 10px 0;
+.b-slider__icon {
+	display: inline-block;
+	width: 94px;
+    height: 93px;
+	background: url("../img/slider/heart.png") no-repeat 50%;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	margin: 0 0 9px 0;
 }
 .b-slider__title {
 	font-size: inherit;
@@ -341,7 +355,6 @@ input, button, a, select {
 .b-best {
 	padding: 54px 0 50px 0;
 }
-
 .b-best__list {
 	display: flex;
 	flex-flow: row wrap;
@@ -354,19 +367,23 @@ input, button, a, select {
 	width: 290px;
 	height: 245px;
 	margin: 0 10px 10px 0;
-	display: flex;
-	flex-flow: column nowrap;
-	-webkit-justify-content: center;
-	justify-content: center;
-	align-items: center;
 	overflow: hidden;
 	cursor: pointer;
+}
+.b-best__item--big {
+	width: 590px;
+	height: 245px;
+	display: flex;
+	flex-flow: row nowrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	align-items: center;
 }
 .b-best__item:hover {
  	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
  }
 .b-best__img-container {
-	width: 230px;
+	/* width: 230px; */
 	text-align: center;
 }
 .b-best__item--big .b-best__img-container {
@@ -382,13 +399,16 @@ input, button, a, select {
 	margin: 0 20px 0 0;
 }
 .b-best__item--green-ellipse {
-	background: #f4f4f4 url("../img/best/green-ellipse.png") no-repeat;
+	background: #f4f4f4 url("../img/best/green-ellipse.png") no-repeat 50%;
+	background-size: cover;
 }
 .b-best__item--blue-ellipse {
-	background: #f4f4f4 url("../img/best/blue-ellipse.png") no-repeat;
+	background: #f4f4f4 url("../img/best/blue-ellipse.png") no-repeat 50%;
+	background-size: cover;
 }
 .b-best__img {
 	max-width: 100%;
+    max-height: 100%;
 	vertical-align: middle;
 }
 .b-best__title {
@@ -401,16 +421,15 @@ input, button, a, select {
 	font-weight: 500;
 	line-height: 21px;
 }
-.b-best__item--big {
-	width: 590px;
-	height: 245px;
-	flex-flow: row nowrap;
+.b-best__description {
+	max-height: 100%;
+	overflow: hidden;
 }
 .b-best__item--big .b-best__description {
 	width: 250px;
 }
 .b-best__item--bonus {
-	background-color:  #ffdc00;
+	background-color:  #ffde00;
 }
 .b-best__item--bonus .b-best__description {
 	width: 225px;
@@ -450,7 +469,7 @@ input, button, a, select {
 	align-items: center;
 }
 .b-advantage__item {
-	width: 285px;
+	max-width: 285px;
 	height: 76px;
 }
 .b-advantage__img-container,
@@ -459,8 +478,12 @@ input, button, a, select {
 	vertical-align: middle;
 }
 .b-advantage__img-container {
-	width: 75px;
+	width: 70px;
+	height: 70px;
 	margin: 0 15px 0 0;
+}
+.b-advantage__img {
+	width: 100%;
 }
 .b-advantage__text-container {
 	width: 150px;
@@ -470,6 +493,7 @@ input, button, a, select {
 .b-advantage__text {
 	font-size: 13px;
 	font-weight: 700;
+	line-height: 17px;
 	text-transform: uppercase;
 	word-break: break-word;
 	color: inherit;
@@ -487,11 +511,12 @@ input, button, a, select {
 	justify-content: flex-start;
 }
 .b-inspire__item {
-	text-align: center;
+	width: 290px;
 	margin: 0 10px 38px 0;
+	text-align: center;
 }
 .b-inspire__img-container {
-	width: 290px;
+	width: 100%;
 	height: 271px;
 	padding: 12px 0 0 0;
 	margin: 0 0 16px 0;
@@ -563,6 +588,10 @@ input, button, a, select {
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
 }
+.b-brand__img-container {
+	width: 100%;
+	height: 100%;
+}
 .b-brand__title-container {
 	margin: 0 0 37px 0;
 	align-items: baseline;
@@ -588,6 +617,7 @@ input, button, a, select {
 	padding: 20px 0 0 0;
 	border: 1px solid #f4f4f4;
 	text-align: center;
+	position: relative;
 }
 .b-brand__item-title {
 	display: block;
@@ -596,6 +626,8 @@ input, button, a, select {
 	font-size: 15px;
 	font-weight: 500;
 	color: #161616;
+	position: relative;
+    bottom: 27px;
 	transition: visibility 0s, opacity 0.5s linear;
 }
 .b-brand__item:hover  { border-color: #ddd;	}
@@ -980,7 +1012,7 @@ input, button, a, select {
 	height: 100%;
 }
 .b-viewed__item-name {
-	display: table-cell;
+	display: inline-block;
 	width: 132px;
 	height: 50px;
 	padding: 5px 0 0 0;
@@ -1144,7 +1176,3 @@ input, button, a, select {
 	font-size: 13px;
 }
 .b-designer__link {	text-decoration: underline; }
-
-@media screen and max-width(960px) {
-	
-}

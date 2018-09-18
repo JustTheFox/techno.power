@@ -7,29 +7,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="" type="image/png">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
 	<title>Техносила</title>
 </head>
 <body class="b-page">
 	<header class="b-header">
 		<div class="b-top-header">
-			<div class="b-top-header__wrapper b-container">
-				<div class="b-city ">
-					<span class="b-city__name">Город:</span>
-					<a class="b-city__list">Набережные Челны</a>
+			 <div class="b-container">
+			 	<div class="b-top-header__wrapper">
+					<div class="b-city ">
+						<span class="b-city__name">Город:</span>
+						<a class="b-city__list">Набережные Челны</a>
+					</div>
+					<div class="b-nav-list">
+						<ul class="b-nav-list__list b-list">
+							<li class="b-nav-list__item"><a class="b-nav-list__item-link b-link" href="javascript:void(0);" title="">Магазины</a></li>
+							<li class="b-nav-list__item"><a class="b-nav-list__item-link b-link" href="javascript:void(0);" title="">Программа лояльности</a></li>
+							<li class="b-nav-list__item"><a class="b-nav-list__item-link b-link" href="javascript:void(0);" title="">Сервис и поддержка</a></li>
+							<li class="b-nav-list__item"><a class="b-nav-list__item-link b-link" href="javascript:void(0);" title="">Статус заказа</a></li>
+							<li class="b-nav-list__item"><a class="b-nav-list__item-link b-link" href="javascript:void(0);" title=""><mark class="b-mark-promo b-mark">Акции</mark></a></li>
+						</ul>
+					</div>
+					<div class="b-phone">
+						<a class="b-phone__link b-link" href="callto:88007752100">8 800 775 21 00</a>
+					</div>
 				</div>
-				<div class="b-nav-list">
-					<ul class="b-nav-list__list b-list">
-						<li class="b-nav-list__item"><a class="b-nav-list__item-link b-link" href="javascript:void(0);" title="">Магазины</a></li>
-						<li class="b-nav-list__item"><a class="b-nav-list__item-link b-link" href="javascript:void(0);" title="">Программа лояльности</a></li>
-						<li class="b-nav-list__item"><a class="b-nav-list__item-link b-link" href="javascript:void(0);" title="">Сервис и поддержка</a></li>
-						<li class="b-nav-list__item"><a class="b-nav-list__item-link b-link" href="javascript:void(0);" title="">Статус заказа</a></li>
-						<li class="b-nav-list__item"><a class="b-nav-list__item-link b-link" href="javascript:void(0);" title=""><mark class="b-mark-promo b-mark">Акции</mark></a></li>
-					</ul>
-				</div>
-				<div class="b-phone">
-					<a class="b-phone__link b-link" href="callto:88007752100">8 800 775 21 00</a>
-				</div>
-			</div>
+			 </div>
 		</div>
 		<div class="b-main-header">
 			<div class="b-main-header__wrapper b-container">
@@ -72,20 +75,21 @@
 	<main class="b-main">
 		<section class="b-slider">
 			<div class="b-slider__item">
-					<div class="b-slider__content">
-						<img class="b-slider__img" src="img/slider/heart.png" alt="слайд">
-						<h1 class="b-slider__title">Каждый день</h1>
-						<span class="b-slider__text">Товары со скидкой до 20%</span>
-					</div>
-					<div class="b-slider__paging b-paging">
-						<ol class="b-paging__list b-list">
-							<li class="b-paging__item"><a class="b-paging__item-link b-link" href="javascript:void(0);" title=""></a></li>
-							<li class="b-paging__item"><a class="b-paging__item-link b-link" href="javascript:void(0);" title=""></a></li>
-							<li class="b-paging__item"><a class="b-paging__item-link b-link" href="javascript:void(0);" title=""></a></li>
-							<li class="b-paging__item b-paging__item-active"><a class="b-paging__item-link b-link" href="javascript:void(0);" title=""></a></li>
-							<li class="b-paging__item"><a class="b-paging__item-link b-link" href="javascript:void(0);" title=""></a></li>
-						</ol>
-					</div>
+				<div class="b-slider__img"></div>
+				<div class="b-slider__content">
+					<i class="b-slider__icon"></i>
+					<h1 class="b-slider__title">Каждый день</h1>
+					<span class="b-slider__text">Товары со скидкой до 20%</span>
+				</div>
+				<div class="b-slider__paging b-paging">
+					<ol class="b-paging__list b-list">
+						<li class="b-paging__item"><a class="b-paging__item-link b-link" href="javascript:void(0);" title=""></a></li>
+						<li class="b-paging__item"><a class="b-paging__item-link b-link" href="javascript:void(0);" title=""></a></li>
+						<li class="b-paging__item"><a class="b-paging__item-link b-link" href="javascript:void(0);" title=""></a></li>
+						<li class="b-paging__item b-paging__item-active"><a class="b-paging__item-link b-link" href="javascript:void(0);" title=""></a></li>
+						<li class="b-paging__item"><a class="b-paging__item-link b-link" href="javascript:void(0);" title=""></a></li>
+					</ol>
+				</div>
 			</div>
 			<div class="b-slider__arrow-container">
 				<button class="b-slider__arrow-left b-slider__arrow">
@@ -214,7 +218,7 @@
 		</section>
 		<section class="b-inspire">
 			<div class="b-container">
-				<h2 class="b-title">Вдохновляющий выбор</h2>
+				<h2 class="b-title b-title--inspire">Вдохновляющий выбор</h2>
 				<div class="b-inspire__list">
 					<a class="b-inspire__item b-link" href="javascript:void(0);" title="">
 						<div class="b-inspire__img-container b-inspire__img-container--blue">
