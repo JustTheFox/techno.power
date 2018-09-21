@@ -8,7 +8,8 @@
 	<link rel="shortcut icon" href="" type="image/png">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
-	<title>Техносила</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" ></script>
+	<title>Техносила - Интернет-магазин электроники</title>
 </head>
 <body class="b-page">
 	<header class="b-header">
@@ -35,7 +36,13 @@
 			 </div>
 		</div>
 		<div class="b-main-header">
-			<div class="b-main-header__wrapper b-container">
+			<div class="b-container">
+				<div class="b-main-header__wrapper">
+				<a href="javascript:void(0);" class="b-toggle" id="js-touch-menu">
+					<span class="b-toggle__item"></span>
+					<span class="b-toggle__item"></span>
+					<span class="b-toggle__item"></span>
+				</a>
 				<a href="javascript:void(0);" title="" class="b-logo">
 					<img class="b-logo__img" src="img/logo.png" alt="Интернет-магазин Техносила">
 				</a>
@@ -50,11 +57,12 @@
 					</div>
 					<div class="b-basket">
 						<a class="b-basket__link b-link" href="javascript:void(0);" title="Корзина">
-							<img class="b-basket__img" src="img/icon/basket.png" alt="Корзина">
+							<i class="b-basket__icon"></i>
 							<span class="b-basket__count">13</span>
 						</a>
 					</div>
 				</div>
+			</div>
 			</div>
 		</div>
 		<nav class="b-menu">
@@ -698,7 +706,7 @@
 			<div class="b-footer-container">
 				<div class="b-footer-nav">
 					<div class="b-footer-nav__column">
-						<span class="b-footer__title">О Техносиле</span>
+						<span class="b-footer__title b-footer__title--list">О Техносиле</span>
 						<ul class="b-footer__nav-list b-list">
 							<li class="b-footer__nav-item"><a class="b-footer__nav-link b-link" href="javascript:void(0);" title="">Новости компании</a></li>
 							<li class="b-footer__nav-item"><a class="b-footer__nav-link b-link" href="javascript:void(0);" title="">Вакансии</a></li>
@@ -708,7 +716,7 @@
 						</ul>
 					</div>
 					<div class="b-footer-nav__column">
-						<span class="b-footer__title">Помощь покупателю</span>
+						<span class="b-footer__title b-footer__title--list">Помощь покупателю</span>
 						<ul class="b-footer__nav-list b-list">
 							<li class="b-footer__nav-item"><a class="b-footer__nav-link b-link" href="javascript:void(0);" title="">Как сделать заказ на сайте</a></li>
 							<li class="b-footer__nav-item"><a class="b-footer__nav-link b-link" href="javascript:void(0);" title="">Оплата</a></li>
@@ -720,7 +728,7 @@
 						</ul>
 					</div>
 					<div class="b-footer-nav__column">
-						<span class="b-footer__title">Услуги и сервисы</span>
+						<span class="b-footer__title b-footer__title--list">Услуги и сервисы</span>
 						<ul class="b-footer__nav-list b-list">
 							<li class="b-footer__nav-item"><a class="b-footer__nav-link b-link" href="javascript:void(0);" title="">Покупка в кредит</a></li>
 							<li class="b-footer__nav-item"><a class="b-footer__nav-link b-link" href="javascript:void(0);" title="">Бонусная программа</a></li>
@@ -794,5 +802,23 @@
 			</div>
 		</div>
 	</footer>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var touch = $('#touch-menu');
+		    var menu = $('.nav');
+		 
+		    $(touch).on('click', function(e) {
+		        e.preventDefault();
+		        menu.slideToggle();
+		    });
+		    $(window).resize(function(){
+		        var wid = $(window).width();
+		        if(wid > 760 && menu.is(':hidden')) {
+		            menu.removeAttr('style');
+		        }
+		    });
+		    
+		});
+	</script>
 </body>
 </html>

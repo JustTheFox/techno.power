@@ -22,7 +22,7 @@
 	font-style: normal; 
 	font-weight: 900; 
 }
-body, section, div, p, h1, h2, h3, h4, h5, img, ul, li, 
+body, section, div, p, h1, h2, h3, h4, h5, img, ul, ol, li, 
 input, button, a, select {
 	margin: 0;
 	padding: 0;
@@ -137,7 +137,13 @@ input, button, a, select {
 .b-main-header { padding: 19px 0 16px 0; }
 
 .b-logo {
+	width: 209px;
+	height: 44px;
 	margin: 0 26px 0 0;
+}
+.b-logo__img {
+	width: 100%;
+	height: auto;
 }
 .b-input {
 	border: 1px solid #ccc;
@@ -211,6 +217,15 @@ input, button, a, select {
 }
 .b-basket__link {
 	position: relative;
+}
+.b-basket__icon {
+	width: 32px;
+    height: 33px;
+	display: inline-block;
+	background: #fff url("../img/icon/basket.png") no-repeat 50%;
+	-webkit-background-size: contain;
+	     -o-background-size: contain;
+	        background-size: contain;
 }
 .b-basket__count {
 	display: block;
@@ -370,6 +385,9 @@ input, button, a, select {
 	overflow: hidden;
 	cursor: pointer;
 }
+.b-best__item:hover {
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
 .b-best__item--big {
 	width: 590px;
 	height: 245px;
@@ -379,11 +397,7 @@ input, button, a, select {
 	justify-content: flex-start;
 	align-items: center;
 }
-.b-best__item:hover {
- 	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
- }
 .b-best__img-container {
-	/* width: 230px; */
 	text-align: center;
 }
 .b-best__item--big .b-best__img-container {
@@ -872,7 +886,7 @@ input, button, a, select {
 	padding: 40px 0 39px 0;
 }
 .b-advice__slide-container--black {
-	background: #000 url("../img/banner-braslet2.png") no-repeat center left;
+	background: #000 url("../img/banner-braslet-1280.png") no-repeat 0% 0%;
 }
 .b-advice__slide-container--white {
 	padding: 40px 0 42px 0;
@@ -933,7 +947,8 @@ input, button, a, select {
 .b-advice__info-btn {
 	width: 165px;
 	padding: 0 10px;
-	margin: 0 5px 5px 0;
+	/* margin: 0 5px 5px 0; */
+	margin: 0 5px 21px 0;
 }
 .b-advice__product {
 	height: 465px;
@@ -1023,7 +1038,6 @@ input, button, a, select {
 	vertical-align: middle;
 	overflow: hidden;
 }
-.b-viewed__price {}
 .b-viewed__price-value {
 	font-size: 18px;
 }

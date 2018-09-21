@@ -1,13 +1,10 @@
-@media screen and (max-width: 1279px) {
+@media only screen and (max-width: 1279px) {
 	.b-container {
 		max-width: 916px;
 	}
 	.b-btn { 
 		padding: 0 15px;
 		font-size: 13px;
-	}
-	.b-page {
-		
 	}
 	.b-top-header {
 		padding: 10px 0 11px 0;
@@ -86,6 +83,7 @@
 	.b-best {
 	    padding: 35px 0 27px 0;
 	}
+
 	.b-best__item--big {
 		width: 452px;
 		height: 188px;
@@ -324,4 +322,341 @@
 	.b-designer__name {
 		margin: 0 19px 0 0;
 	}
+}
+@media only screen and (max-width: 959px) {
+	.b-container {
+		max-width: 586px;
+		padding: 0 10px;
+	}
+	.b-top-header,
+	.b-login,
+	.b-search__input,
+	.b-menu,
+	.b-slider__arrow,
+	.b-advice__nav-btn,
+	.b-arrow-container { 
+		display: none;
+	}
+	/* .b-title {
+		font-size: 25px;
+	} */
+	.b-btn {
+		height: 35px;
+	}
+	.b-main-header {
+		padding: 7px 0 6px 0;
+	}
+	.b-toggle {
+		flex: 0 0 5%;
+		display: block;
+		height: 15px;
+		margin: 0 20px 0 0;
+		position: relative;
+	}
+	.b-toggle__item {
+		display: block;
+		width: 21px;
+		height: 2px;
+		background-color: #999;
+		position: relative;
+	}
+	.b-toggle__item:first-child {
+		top: 0;
+		left: 0;
+	}
+	.b-toggle__item:nth-child(2) {
+		top: 4px;
+		left: 0;
+	}
+	.b-toggle__item:last-child {
+		top: 9px;
+		left: 0;
+	}
+	.b-logo {
+		width: 173px;
+		height: 35px;
+		margin: 0 auto 0 0;
+	}
+	.b-search {
+		width: 42px;
+		flex: 0 0 10%;
+	}
+	.b-search__submit {
+		border-color: transparent;
+	}
+	.b-basket {
+		margin: 0;
+		flex: 0 0 5%;
+	}
+	.b-basket__icon {
+		width: 22px;
+		height: 21px;
+		background: url("../img/icon/basket-600.png") no-repeat 50%;
+		background-size: contain;
+	}
+	.b-basket__count {
+		top: -15px;
+		right: -7px;
+	}
+	.b-slider {
+		height: 320px;
+	}
+	.b-slider__content {
+		padding: 60px 25px 0 0px;
+		font-size: 30px;
+		line-height: 35px;
+	}
+	.b-slider__content::before {
+		background: url("../img/slider/circle600.png") no-repeat;
+		top: 0;
+		left: -61px;
+	}
+	.b-slider__icon {
+		width: 71px;
+		height: 71px;
+		margin: 0 0 3px 0;
+	}
+	.b-slider__paging {
+		bottom: -5%;
+		right: 45%;
+	}
+	.b-paging__item {
+		width: 6px;
+		height: 6px;
+		margin: 0 5px 0 0;
+	}
+
+	.b-best__list {
+		width: 100%;
+	}
+	.b-best__item {
+		margin: 0 2% 10px 0;
+	}
+	.b-best__item--big {
+		flex: 0 0 100%;
+		margin: 0 0 10px 0;
+	}
+	.b-best__item--mini {
+		height: 245px;
+		flex: 0 0 49%;
+	}
+	.b-best__item--mini + .b-best__item--mini { margin: 0 0 10px 0; }
+	.b-best__item--mini .b-best__img-container {
+		height: 165px;
+    	line-height: 165px;
+	}
+
+	.b-advantage__list {
+		flex-flow: row wrap;
+		justify-content: flex-start;
+	}
+	.b-advantage__item {
+		width: 50%;
+		margin: 0 0 15px 0;
+	}
+	.b-advantage__text-container {
+		width: 150px;
+		height: 45px;
+	}
+	.b-inspire__item {
+		width: 278px;
+		height: 260px;
+		margin: 0 0 23px 0;
+		/* max-height: 260px; */
+		flex: 0 0 48%;
+	}
+	.b-inspire__item:nth-child(odd) { margin: 0 2% 23px 0; }
+	.b-inspire__img--sport {
+		left: 0%;
+	}
+	.b-inspire__title {
+		/* font-size: 20px; */
+	}
+
+	.b-brand__list,
+	.b-interesting__list,
+	.b-viewed__list {
+		justify-content: flex-start;
+		overflow: hidden;
+	}
+	.b-brand__item {
+		width: 190px;
+		height: 130px;
+		margin: 0 10px 0 0;
+		flex-shrink: 0;
+	}
+	.b-brand__item-title {
+		visibility: visible;
+		opacity: 1;
+	}
+	.b-brand__img {
+		height: 65%;
+	}
+
+	.b-banner__info-container {
+		width: 288px;
+		padding: 45px 0 0 0px;
+	}
+	.b-banner__img-container {
+		width: 279px;
+	}
+
+	.b-banner__info {
+		width: 215px;
+		font-size: 15px;
+		line-height: 21px;
+	}
+	.b-banner__title,
+	.b-banner__text {
+		line-height: 21px;
+	}
+	.b-banner__img {
+		left: 0;
+	}
+
+	.b-advice__nav {
+		width: 736px; 
+		overflow-x: hidden;
+    }
+    .b-advice__nav-link {
+		padding: 0 17px 15px 0;
+		margin: 0 25px 0 0;
+		font-size: 15px;
+		flex-shrink: 0;
+    }
+	.b-advice__slide {
+		flex-flow: column nowrap;
+	}
+	.b-advice__slide-container--black {
+		background-image: url("../img/banner-braslet-600.png");
+	}
+	.b-advice__info-text,
+	.b-advice__info--black-text .b-advice__info-text {
+		width: 100%;
+	}
+
+	.b-advice__products {
+		justify-content: flex-start;
+	}
+	.b-advice__product {
+		width: 182px;
+		height: 328px;
+		padding: 10px 10px 0 10px;
+	}
+	.b-product__img-container {
+		width: 160px;
+		height: 135px;
+
+	}
+	.b-advice__product .b-product__name {
+		width: 130px;
+	}
+	.b-advice__product .b-product__img {
+		width: 100%;
+	}
+	.b-advice__product .b-price__value {
+		font-size: 20px;
+	}
+	
+
+	.b-viewed__item {
+		width: 170px;
+		height: 190px;
+		margin: 0 10px 0 0;
+		flex-shrink: 0;
+		display: flex;
+		justify-content: flex-start;
+		flex-flow: column nowrap;
+	}
+	.b-viewed__info-container {
+		width: 100%;
+	}
+	.b-viewed__item-name {
+		width: 100%;
+		font-size: 11px;
+		line-height: 15px;
+	}
+	.b-viewed__price-value {
+		font-size: 18px;
+		line-height: 25px;
+	}
+	.b-price__currency {
+		font-size: 11px;
+		line-height: 24.256px;
+	}
+
+	.b-feedback__info,
+	.b-form {
+		width: 100%;
+	}
+	.b-feedback__info {
+		margin: 0 0 15px 0;
+	}
+	.b-form {
+		justify-content: flex-start;
+	}
+
+	.b-form__input-email {
+		margin: 0 1.5% 0 0;
+		flex: 0 0 65.5%;
+	}
+	.b-form__input-btn {
+		height: 40px;
+		flex: 0 0 33%;
+	}
+
+	.b-footer {
+		padding: 0;
+	}
+	.b-feedback-container,
+	.b-footer-nav {
+		padding: 0;
+		flex-flow: column nowrap;
+	}
+	.b-footer-nav__column,
+	.b-footer__info {
+		width: 100%;
+		padding: 15px 0;
+	}
+	.b-footer-nav__column {
+		border-bottom: 1px solid #ddd;
+	}
+	.b-footer__title {
+		position: relative;
+	}
+	.b-footer__title--list::after {
+		content: "";
+		display: block;
+		width: 23px;
+		height: 11px;
+		background: url("../img/icon/arrow-bottom.png") no-repeat 50%;
+		background-size: contain;
+		position: absolute;
+		top: 8px;
+		right: 0px;
+	}
+	.b-footer__nav-item {
+		line-height: 30px;
+	}
+	.b-phone--footer {
+		display: inline-block;
+		width: 183px;
+		padding: 15px 0 0 0;
+		margin: 0 10px 0 0;
+		vertical-align: top;
+	}
+	.b-phone__link--footer {
+		width: 100%;
+		height: 40px;
+		padding: 8px 32px;
+		margin: 0 0 5px 0;
+		background-color: #ffdc00;
+	}
+	.b-copyright__info {
+		margin: 0 0 15px 0;
+	}
+	.b-copyright {
+		flex-flow: column nowrap;
+	}
+
 }
