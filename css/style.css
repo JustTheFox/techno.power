@@ -301,7 +301,7 @@ input, button, a, select {
 	background-color: #ffde00;
 	position: relative;
 }
-.b-slider__content::before {
+.b-slider__content::after {
 	content: "";
 	display: block;
 	width: 80px;
